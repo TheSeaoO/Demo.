@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<meta name="force-rendering" content="webkit" />
+<title>Login</title>
+<link type="text/css" rel="stylesheet" href="/static/css/style.css/">
+
+<script type="text/javascript">
+$(document).ready(function () {
+   var height=$(document).height();
+   $('body').css('height',height);
+   var mart=height-500;
+   mart = mart/2;
+   $('.loginBox').css('marginTop',mart);
+})
+</script>
+</head>
+<body>
+
+<form method="post" action="{% url 'the1:登录'%}">
+
+<div class="loginBox">
+<h1>欢迎登陆</h1>
+<div class="item">
+<div class="icon"><img src=?/static/images/icon1.png"/></div>
+<div class="txt"><input name="username1" type="text" placeholder="请输入您的用户名" /></div>
+</div>
+<div class="item">
+<div class="icon"><img src=?/static/images/icon2.png"/></div>
+<div class="txt"><input name="password1" type="password" placeholder="请输入您的密码" /></div>
+</div>
+<div class="item_2">
+<input name="" type="checkbox" value="" />
+<span>记住密码</span>
+<a href="http://127.0.0.1:8000/the1/psd/">忘记密码？</a>
+</div>
+<div class="item_3">
+<input name="" type="submit" value="登录" class="btn" />
+<span style="color:#ff0000;">{{ error_msg }}</span>
+</div>
+<div class="item_4">
+还没有账号？<a href="http://127.0.0.1:8000/the1/Register/">立即注册</a>
+</div>
+</div>
+
+</form>
+
+
+</body>
+</html>
